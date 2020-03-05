@@ -71,7 +71,9 @@ linked_elem_t* delete_elem_from_list(linked_elem_t *elem, linked_elem_t *start_e
 
     if(elem == start_elem)
     {
-        return elem->next;
+        iterator = start_elem->next;
+        free(elem);
+        return iterator;
     }
 
     while(iterator->next != NULL)
